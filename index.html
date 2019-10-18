@@ -1919,7 +1919,6 @@
 <button id="" style="font-size:40px;" onclick="addForm()">ADD</button>
 <button id="addForm" style="font-size:40px;" onclick="resultCode();">КОД</button>
 <button style="font-size:40px;" onclick="copyCode()">COPY</button>
-<button style="font-size:40px;" onclick="saveFile()">скачать</button>
 </div>
 <div id="allResult" style="width: 820px;float: right;font-family: 'tahoma';font-size: 12px;" onclick="copyCode()"></div>
 
@@ -3178,10 +3177,6 @@ function copyCode(){// копирование кода
 		sel.addRange(rng);
 		document.execCommand('copy');
 	}
-};
-
-function saveFile(){
-	var blob = new Blob([''], {type: "text/plain"});
 };
 
 // загрузчик
