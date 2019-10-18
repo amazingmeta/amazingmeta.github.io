@@ -2967,7 +2967,7 @@ function resSound(obj){// НОМЕР СОУНДТРЕКА
 		document.getElementById(getNo(obj)).removeAttribute('SoundTrack');
 	}
 	if(getVal(obj)>0){
-		urL='file:///C:/Users/Book/Desktop/Filter_PoE/sound/'+getVal(obj)+'.mp3';
+		urL='/sound/'+getVal(obj)+'.mp3';
 		aud=document.getElementById('audio');
 		aud.setAttribute('src',urL);
 		aud.play();
