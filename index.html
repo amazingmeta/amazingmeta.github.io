@@ -2658,7 +2658,6 @@ function resultCode(){// снимаем параметры с атрибутов
 		cmiCheck=e.getAttribute('mapIconColor');// получаем цвет иконки карты
 		fmiCheck=e.getAttribute('mapIconForm');// получаем форму иконки карты
 		if (cmiCheck&&fmiCheck&&smiCheck===null) {smiCheck='0';}else{smiCheck=smiCheck;}
-		console.log(smiCheck);
 		if (smiCheck&&cmiCheck&&fmiCheck) {mmi=setMI+smiCheck+' '+cmiCheck+' '+fmiCheck+br;}else{};
 
 		// дроп эффект при падении ???
