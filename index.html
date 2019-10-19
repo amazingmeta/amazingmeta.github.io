@@ -3,13 +3,13 @@
 <head>
 	<meta charset="utf-8">
 	<!-- Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-VF9V29VWRZ"></script>
-	<script>
+	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-VF9V29VWRZ"></script> -->
+<!-- 	<script>
   		window.dataLayer = window.dataLayer || [];
   		function gtag(){dataLayer.push(arguments);}
   		gtag('js', new Date());
  		gtag('config', 'G-VF9V29VWRZ');
-	</script>
+	</script> -->
 	<title>Создай свой фильтр для Path of Exile</title>
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<style type="text/css">
@@ -3440,7 +3440,6 @@ for (var i = 0; i < erw; i++) {
 		spavner(el,'Сфера отмены');
 		spavner(el,'Древняя сфера');
 		spavner(el,'Сфера Предвестника');
-		spavner(el,'Осколок возвышения');
 		atr(el,pref[2],'255 0 0');//	цвет текста
 		atr(el,pref[3],'255 255 255');//цвет фона
 		atr(el,pref[4],'255 0 0');//	цвет бордер
@@ -3511,7 +3510,38 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[6],ddS);//			удаляем стандартный звук
 	};
 
-	if (i===6) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СВИТКИ И ТОЧИЛКИ');//					ГОТОВО
+	if (i===6) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ОСКОЛКИ ВАЛЮТ');//						ГОТОВО
+		spavner(el,'Валюта');
+		spavner(el,'Осколок возвышения');spavner(el,'Осколок отмены');spavner(el,'Осколок Предвестника');spavner(el,'Древний осколок');
+		atr(el,pref[2],'0 255 0');//	цвет текста
+		atr(el,pref[3],'0 0 0');//		цвет фона
+		atr(el,pref[4],'0 255 0');//	цвет бордер
+		atr(el,pref[10],'Circle');//	форма иконки миникарты
+		atr(el,pref[11],'Green');//		цвет иконки миникарты
+		atr(el,pref[12],'0');//			размер иконки миникарты
+		atr(el,pref[13],'Green');//		цвет свечения
+		atr(el,pref[5],'45');//			размер
+		atr(el,pref[6],ddS);//			удаляем стандартный звук
+		atr(el,pref[8],'2');//			номер звука
+		atr(el,pref[7],pos);//			звук с позицией
+		atr(el,pref[9],'300');//		громкость
+	};
+
+	if (i===7) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ТРЕШ ОСКОЛКИ ВАЛЮТ');//						ГОТОВО
+		spavner(el,'Валюта');
+		spavner(el,'Осколок хаоса');spavner(el,'Осколок царей');spavner(el,'Инженерный осколок');spavner(el,'Осколок горизонтов');spavner(el,'Осколок сплетения');
+		atr(el,pref[2],'170 158 120');//цвет текста
+		atr(el,pref[3],'0 0 0');//		цвет фона
+		atr(el,pref[4],'255 215 0');//	цвет бордер
+		atr(el,pref[5],'38');//			размер
+		atr(doc(i),pref[6],ddS);//		удаляем стандартный звук
+		atr(el,pref[8],'9');//			номер звука
+		atr(el,pref[7],pos);//			звук с позицией
+		atr(el,pref[9],'300');//		громкость	
+	};
+
+
+	if (i===8) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СВИТКИ И ТОЧИЛКИ');//					ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Свиток мудрости');
 		spavner(el,'Свиток портала');
@@ -3525,7 +3555,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[6],ddS);//			удаляем стандартный звук
 	};
 
-	if (i===7) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ОСКОЛКИ РАЗЛОМОВ');//					ГОТОВО		
+	if (i===9) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ОСКОЛКИ РАЗЛОМОВ');//					ГОТОВО		
 		spavner(el,'Валюта');
 		spavner(el,'Осколок Ксофа');spavner(el,'Осколок Тул');spavner(el,'Осколок Иш');spavner(el,'Осколок Уул-Нетол');spavner(el,'Осколок Чаюлы');
 		atr(el,pref[2],'125 213 255');//цвет текста
@@ -3542,7 +3572,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===8) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВНЕВРЕМЕННЫЕ ОСКОЛКИ');//				ГОТОВО
+	if (i===10) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВНЕВРЕМЕННЫЕ ОСКОЛКИ');//				ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Вневременной осколок каруи');spavner(el,'Вневременной осколок маракетов');spavner(el,'Вневременной осколок Вечной Империи');spavner(el,'Вневременной осколок храмовников');spavner(el,'Вневременной осколок ваал');
 		atr(el,pref[2],'191 247 2');//	цвет текста
@@ -3559,7 +3589,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===9) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БЛАГИ БИЧЕЙ');//							ГОТОВО
+	if (i===11) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БЛАГИ БИЧЕЙ');//							ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Благословение Ксофа');spavner(el,'Благословение Тул');spavner(el,'Благословение Иш');spavner(el,'Благословение Уул-Нетол');spavner(el,'Благословение Чаюлы');
 		atr(el,pref[2],'200 200 200');//цвет текста
@@ -3575,7 +3605,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[7],pos);//			звук с позицией
 		atr(el,pref[9],'300');//		громкость
 	};
-	if (i===10) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БЕЛЫЙ СЕКСТАНТ УЧЕНИКА');//				ГОТОВО
+	if (i===12) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БЕЛЫЙ СЕКСТАНТ УЧЕНИКА');//				ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Секстант картоходца-ученика');
 		atr(el,pref[2],'255 255 255');//цвет текста
@@ -3591,7 +3621,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[7],pos);//			звук с позицией
 		atr(el,pref[9],'300');//		громкость
 	};
-	if (i===11) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЖЕЛТЫЙ СЕКСТАНТ ПОДМАСТЕРЬЯ');//		ГОТОВО
+	if (i===13) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЖЕЛТЫЙ СЕКСТАНТ ПОДМАСТЕРЬЯ');//		ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Секстант картоходца-подмастерья');
 		atr(el,pref[2],'255 255 187');//цвет текста
@@ -3607,7 +3637,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[7],pos);//			звук с позицией
 		atr(el,pref[9],'300');//		громкость
 	};
-	if (i===12) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КРАСНЫЙ СЕКСТАНТ МАСТЕРА');//			ГОТОВО
+	if (i===14) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КРАСНЫЙ СЕКСТАНТ МАСТЕРА');//			ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Секстант мастера картоходца');
 		atr(el,pref[2],'255 255 255');//цвет текста
@@ -3623,7 +3653,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[7],pos);//			звук с позицией
 		atr(el,pref[9],'300');//		громкость
 	};
-	if (i===13) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КОЛОДА КАРТ');//						ГОТОВО
+	if (i===15) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КОЛОДА КАРТ');//						ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Колода карт');
 		atr(el,pref[2],'170 158 120');//цвет текста
@@ -3640,7 +3670,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===14) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ТОПОВЫЕ ГАДАЛЬНЫЕ КАРТЫ');//			ГОТОВО
+	if (i===16) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ТОПОВЫЕ ГАДАЛЬНЫЕ КАРТЫ');//			ГОТОВО
 		spavner(el,'Гадальные карты');
 		spavner(el,'Забытое богатство');
 		spavner(el,'Соблазнительная награда');
@@ -3686,7 +3716,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===15) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ГАДАЛЬНЫЕ КАРТЫ');//					ГОТОВО
+	if (i===17) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ГАДАЛЬНЫЕ КАРТЫ');//					ГОТОВО
 		spavner(el,'Гадальные карты');
 		atr(el,pref[2],'14 186 255');//	цвет текста
 		atr(el,pref[3],'0 0 0');//		цвет фона
@@ -3702,7 +3732,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===16) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МОНЕТЫ ПЕРАНДУСОВ');//					ГОТОВО
+	if (i===18) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МОНЕТЫ ПЕРАНДУСОВ');//					ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Монета Перандусов');
 		atr(el,pref[2],'228 235 180');//цвет текста
@@ -3720,7 +3750,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===17) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СЕРЕБРЯННЫЕ МОНЕТЫ');//					ГОТОВО
+	if (i===19) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СЕРЕБРЯННЫЕ МОНЕТЫ');//					ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Серебряная монета');
 		atr(el,pref[2],'218 187 253');//цвет текста
@@ -3735,7 +3765,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость		
 	};
 
-	if (i===18) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ПРОРОЧКИ');//							ГОТОВО
+	if (i===20) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ПРОРОЧКИ');//							ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Все Пророчества');
 		atr(el,pref[2],'204 0 154');//	цвет текста
@@ -3752,7 +3782,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===19) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МАСЛА');//								ГОТОВО
+	if (i===21) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МАСЛА');//								ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Все Масла');
 		atr(el,pref[2],'255 255 0');//	цвет текста
@@ -3769,7 +3799,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===20) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ФИАЛЫ');//								ГОТОВО
+	if (i===22) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ФИАЛЫ');//								ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Все Фиалы');
 		atr(el,pref[2],'0 0 0');//		цвет текста
@@ -3786,7 +3816,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===21) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'РЕЗОНАТОРЫ');//							ГОТОВО
+	if (i===23) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'РЕЗОНАТОРЫ');//							ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Все Резонаторы');
 		atr(el,pref[2],'255 255 255');//цвет текста
@@ -3803,7 +3833,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===22) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ФОСИЛЫ');//								ГОТОВО
+	if (i===24) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ФОСИЛЫ');//								ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Все Ископаемые');
 		atr(el,pref[2],'0 0 0');//		цвет текста
@@ -3820,7 +3850,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===23) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ИНКУБАТОРЫ');//							ГОТОВО
+	if (i===25) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ИНКУБАТОРЫ');//							ГОТОВО
 		spavner(el,'Инкубаторы');
 		spavner(el,'Все Инкубаторы');
 		atr(el,pref[2],'255 128 192');//цвет текста
@@ -3837,7 +3867,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===24) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ТОПОВЫЕ СУЩНОСТИ');//					ГОТОВО
+	if (i===26) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ТОПОВЫЕ СУЩНОСТИ');//					ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Все Топовые Сущности');
 		atr(el,pref[2],'150 0 0');//	цвет текста
@@ -3854,7 +3884,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===25) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СУЩНОСТИ');//							ГОТОВО
+	if (i===27) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СУЩНОСТИ');//							ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Все Вопящие сущности');spavner(el,'Все Кричащие сущноси');spavner(el,'Все Визжащие сущности');spavner(el,'Все Оглушающие сущности');
 		atr(el,pref[2],'16 84 16');//	цвет текста
@@ -3871,7 +3901,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===26) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МЕЛКИЕ СУЩНОСТИ');//					ГОТОВО
+	if (i===28) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МЕЛКИЕ СУЩНОСТИ');//					ГОТОВО
 		spavner(el,'Валюта');
 		spavner(el,'Все Шепчущие сущности');spavner(el,'Все Бормочущие сущности');spavner(el,'Все Плачущие сущности');
 		atr(el,pref[2],'16 84 16');//	цвет текста
@@ -3888,7 +3918,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===27) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ШЕЙПЕР СЕТ');//							ГОТОВО
+	if (i===29) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ШЕЙПЕР СЕТ');//							ГОТОВО
 		spavner(el,'Фрагменты');
 		spavner(el,'Фрагмент Гидры');spavner(el,'Фрагмент Феникса');spavner(el,'Фрагмент Минотавра');spavner(el,'Фрагмент Химеры');
 		atr(el,pref[2],'255 255 0');//	цвет текста
@@ -3905,7 +3935,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===28) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БЛЕДНЫЙ СОВЕТ СЕТ');//					ГОТОВО
+	if (i===30) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БЛЕДНЫЙ СОВЕТ СЕТ');//					ГОТОВО
 		spavner(el,'Фрагменты');
 		spavner(el,'Ключ Эвера');spavner(el,'Ключ Ириэла');spavner(el,'Ключ Иньи');spavner(el,'Ключ Волкуур');
 		atr(el,pref[2],'255 255 0');//	цвет текста
@@ -3922,7 +3952,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===29) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'УБЕР АТЗИРИ СЕТ');//					ГОТОВО
+	if (i===31) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'УБЕР АТЗИРИ СЕТ');//					ГОТОВО
 		spavner(el,'Фрагменты');
 		spavner(el,'Смертное уныние');spavner(el,'Смертный гнев');spavner(el,'Смертная надежда');spavner(el,'Смертное невежество');
 		atr(el,pref[2],'255 255 0');//	цвет текста
@@ -3939,7 +3969,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===30) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'АТЗИРИ СЕТ');//							ГОТОВО
+	if (i===32) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'АТЗИРИ СЕТ');//							ГОТОВО
 		spavner(el,'Фрагменты');
 		spavner(el,'Жертва на закате');spavner(el,'Жертва в полночь');spavner(el,'Жертва на рассвете');spavner(el,'Жертва в полдень');
 		atr(el,pref[2],'42 42 42');//	цвет текста
@@ -3952,7 +3982,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===31) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВНЕВРЕМЕННЫЕ ЗНАКИ');//					ГОТОВО
+	if (i===33) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВНЕВРЕМЕННЫЕ ЗНАКИ');//					ГОТОВО
 		spavner(el,'Фрагменты');
 		spavner(el,'Вневременной знак каруи');spavner(el,'Вневременной знак маракетов');spavner(el,'Вневременной знак Вечных');spavner(el,'Вневременной знак храмовников');spavner(el,'Вневременной знак ваал');
 		atr(el,pref[2],'191 247 2');//	цвет текста
@@ -3969,7 +3999,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===32) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ РАЗЛОМОВ');//						ГОТОВО
+	if (i===34) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ РАЗЛОМОВ');//						ГОТОВО
 		spavner(el,'Фрагменты');
 		spavner(el,'Камень Разлома Ксофа');spavner(el,'Камень Разлома Тул');spavner(el,'Камень Разлома Иш');spavner(el,'Камень Разлома Уул-Нетол');spavner(el,'Камень Разлома Чаюлы');
 		spavner(el,'Заряженный камень Разлома Ксофа');spavner(el,'Заряженный камень Разлома Тул');spavner(el,'Заряженный камень Разлома Иш');spavner(el,'Заряженный камень Разлома Уул-Нетол');spavner(el,'Заряженный камень Разлома Чаюлы');
@@ -3989,13 +4019,13 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===33) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КЛЮЧИ РЕЛИКВАРИЯ');
+	if (i===35) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КЛЮЧИ РЕЛИКВАРИЯ');
 		spavner(el,'Фрагменты');
 		spavner(el,'Ключ от Древнего Реликвария');
 		spavner(el,'Ключ от Ветхого Реликвария');
 	};
 
-	if (i===34) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ПОДНОШЕНИЕ БОГИНЕ');//					ГОТОВО
+	if (i===36) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ПОДНОШЕНИЕ БОГИНЕ');//					ГОТОВО
 		spavner(el,'Фрагменты');
 		spavner(el,'Подношение богине');
 		atr(el,pref[2],'42 42 42');//	цвет текста
@@ -4012,7 +4042,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===35) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БОЖЕСТВЕННЫЙ СОСУД');//					ГОТОВО
+	if (i===37) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БОЖЕСТВЕННЫЙ СОСУД');//					ГОТОВО
 		spavner(el,'Фрагменты');
 		spavner(el,'Божественный сосуд');
 		atr(el,pref[2],'42 42 42');//	цвет текста
@@ -4029,7 +4059,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===36) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СКАРАБЕИ');//							ГОТОВО
+	if (i===38) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СКАРАБЕИ');//							ГОТОВО
 		spavner(el,'Фрагменты');
 		spavner(el,'Все Скарабеи');
 		atr(el,pref[2],'164 36 174');//	цвет текста
@@ -4046,7 +4076,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===37) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БЕЛЫЕ КАРТЫ');//						ГОТОВО
+	if (i===39) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БЕЛЫЕ КАРТЫ');//						ГОТОВО
 		spavner(el,'Карты');
 		atr(el,pref[31],'0');//			тир карты ОТ
 		atr(el,pref[32],'5');//			тир карты ДО
@@ -4064,7 +4094,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===38) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЖЕЛТЫЕ КАРТЫ');//						ГОТОВО
+	if (i===40) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЖЕЛТЫЕ КАРТЫ');//						ГОТОВО
 		spavner(el,'Карты');
 		atr(el,pref[31],'6');//			тир карты ОТ
 		atr(el,pref[32],'10');//		тир карты ДО
@@ -4082,7 +4112,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===39) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КРАСНЫЕ КАРТЫ');//						ГОТОВО
+	if (i===41) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КРАСНЫЕ КАРТЫ');//						ГОТОВО
 		spavner(el,'Карты');
 		atr(el,pref[31],'11');//		тир карты ОТ
 		atr(el,pref[2],'255 255 255');//цвет текста
@@ -4099,7 +4129,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===40) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'РЕДКИЕ САМОЦВЕТЫ');//					ГОТОВО
+	if (i===42) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'РЕДКИЕ САМОЦВЕТЫ');//					ГОТОВО
 		spavner(el,'Самоцветы');
 		spavner(el,'Багровый самоцвет');spavner(el,'Бирюзовый самоцвет');spavner(el,'Кобальтовый самоцвет');
 		atr(el,pref[24],'Rare');//		редкость
@@ -4109,7 +4139,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[5],'45');//			размер
 	};
 
-	if (i===41) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МАГИЧЕСКИЕ САМОЦВЕТЫ');//				ГОТОВО
+	if (i===43) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МАГИЧЕСКИЕ САМОЦВЕТЫ');//				ГОТОВО
 		spavner(el,'Самоцветы');
 		spavner(el,'Багровый самоцвет');spavner(el,'Бирюзовый самоцвет');spavner(el,'Кобальтовый самоцвет');
 		atr(el,pref[24],'Magic');//		редкость
@@ -4119,7 +4149,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[5],'40');//			размер
 	};
 
-	if (i===42) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САМОЦВЕТЫ БЕЗДНЫ РЕДКИЕ');//			ГОТОВО
+	if (i===44) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САМОЦВЕТЫ БЕЗДНЫ РЕДКИЕ');//			ГОТОВО
 		spavner(el,'Самоцветы');
 		spavner(el,'Самоцвет призрачного глаза');spavner(el,'Самоцвет пытливого глаза');spavner(el,'Самоцвет гипнотического глаза');spavner(el,'Самоцвет кровожадного глаза');
 		atr(el,pref[24],'Rare');//		редкость		
@@ -4130,7 +4160,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[13],'Green');//		цвет свечения
 	};
 
-	if (i===43) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САМОЦВЕТЫ БЕЗДНЫ МАГИЧЕСКИЕ');//		ГОТОВО
+	if (i===45) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САМОЦВЕТЫ БЕЗДНЫ МАГИЧЕСКИЕ');//		ГОТОВО
 		spavner(el,'Самоцветы');
 		spavner(el,'Самоцвет призрачного глаза');spavner(el,'Самоцвет пытливого глаза');spavner(el,'Самоцвет гипнотического глаза');spavner(el,'Самоцвет кровожадного глаза');
 		atr(el,pref[24],'Magic');//		редкость		
@@ -4141,7 +4171,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[13],'Green');//		цвет свечения
 	};
 
-	if (i===44) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ТИСКИ ПОЯС');//							ГОТОВО
+	if (i===46) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ТИСКИ ПОЯС');//							ГОТОВО
 		spavner(el,'Пояс');
 		spavner(el,'Тёмные тиски');
 		atr(el,pref[3],'74 74 74');//	цвет фона
@@ -4151,7 +4181,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[13],'White');//		цвет свечения
 	};
 
-	if (i===45) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЗАЧАРОВАННЫЕ');//						ГОТОВО
+	if (i===47) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЗАЧАРОВАННЫЕ');//						ГОТОВО
 		spavner(el,'Шлем');spavner(el,'Сапоги');spavner(el,'Перчатки');
 		atr(el,pref[17],T);//			инчант
 		atr(el,pref[2],'204 0 154');//	цвет текста
@@ -4168,7 +4198,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===46) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МУЛЬТИКРАФТ');//						ГОТОВО
+	if (i===48) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'МУЛЬТИКРАФТ');//						ГОТОВО
 		atr(el,pref[23],oC);
 		atr(el,pref[2],'255 255 255');//цвет текста
 		atr(el,pref[3],'168 0 168');//	цвет фона
@@ -4184,7 +4214,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===47) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕЩЬ ДРЕВНЕГО');//						ГОТОВО
+	if (i===49) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕЩЬ ДРЕВНЕГО');//						ГОТОВО
 		atr(el,pref[19],T);//			древний
 		// atr(el,pref[2],'');//		цвет текста
 		atr(el,pref[3],'0 0 0');//		цвет фона
@@ -4200,7 +4230,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===48) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕЩЬ СОЗДАТЕЛЯ');//						ГОТОВО
+	if (i===50) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕЩЬ СОЗДАТЕЛЯ');//						ГОТОВО
 		atr(el,pref[20],T);//			создатель
 		atr(el,pref[3],'0 0 0');//		цвет фона
 		atr(el,pref[4],'164 47 155');//	цвет бордер
@@ -4215,7 +4245,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===49) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕЙЛ МОД');//							ГОТОВО
+	if (i===51) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕЙЛ МОД');//							ГОТОВО
 		atr(el,pref[15],T);//			опознан
 		atr(el,pref[18],'Veil');//		завуалирован
 		atr(el,pref[2],'254 170 0');//	цвет текста
@@ -4232,7 +4262,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===50) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'6 ЛИНК');//								ГОТОВО
+	if (i===52) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'6 ЛИНК');//								ГОТОВО
 		atr(el,pref[45],'=');
 		atr(el,pref[46],'6');
 		atr(el,pref[47],'=');
@@ -4251,7 +4281,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===51) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'УНИКИ');//								ГОТОВО
+	if (i===53) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'УНИКИ');//								ГОТОВО
 		atr(el,pref[24],'Unique');//	рарность
 		atr(el,pref[2],'175 96 37');//	цвет текста
 		atr(el,pref[3],'0 0 0');//		цвет фона
@@ -4267,7 +4297,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===52) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СТАЛЬНОЕ И ОПАЛ КОЛЬЦО');//				ГОТОВО
+	if (i===54) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'СТАЛЬНОЕ И ОПАЛ КОЛЬЦО');//				ГОТОВО
 		spavner(el,'Кольцо');
 		spavner(el,'Стальное кольцо');spavner(el,'Кольцо с опалом');spavner(el,'Кольцо с киноварью');spavner(el,'Кольцо с аквамарином');
 		//atr(el,pref[2],'255 255 255');//цвет текста
@@ -4277,7 +4307,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[13],'White');//		цвет свечения
 	};
 
-	if (i===53) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БАЗЫ ОТ 85ilvl');//						ГОТОВО
+	if (i===55) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'БАЗЫ ОТ 85ilvl');//						ГОТОВО
 		spavner(el,'Колючие перчатки');spavner(el,'Крепкие перчатки');spavner(el,'Шелковые митенки');spavner(el,'Костяной шлем');
 		atr(el,pref[27],'85')
 		//atr(el,pref[2],'255 255 255');//цвет текста
@@ -4287,14 +4317,14 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[13],'White');//		цвет свечения
 	};
 
-	if (i===54) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'6 СОКЕТОВ');//							ГОТОВО
+	if (i===56) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'6 СОКЕТОВ');//							ГОТОВО
 		atr(el,pref[45],'=');
 		atr(el,pref[46],'6');
 		atr(el,pref[5],'45');//			размер
 		atr(el,pref[4],'255 255 255');//цвет бордер
 	};
 
-	if (i===55) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ОПОЗНАННЫЕ РЕДКИЕ ВЕЩИ');//				ГОТОВО
+	if (i===57) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ОПОЗНАННЫЕ РЕДКИЕ ВЕЩИ');//				ГОТОВО
 		atr(el,pref[15],T);//			опознан
 		atr(el,pref[24],'Rare');//		редкость		
 		atr(el,pref[2],'255 255 0');//	цвет текста
@@ -4305,7 +4335,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[14],'Temp');//		при палении
 	};
 
-	if (i===56) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'НЕОПОЗНАННЫЕ РЕДКИЕ ВЕЩИ');//			ГОТОВО
+	if (i===58) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'НЕОПОЗНАННЫЕ РЕДКИЕ ВЕЩИ');//			ГОТОВО
 		atr(el,pref[15],F);//			опознан
 		atr(el,pref[24],'Rare');//		редкость		
 		atr(el,pref[2],'255 255 0');//	цвет текста
@@ -4316,7 +4346,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[14],'Temp');//		при палении
 	};
 
-	if (i===57) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕНДОРУ RGB');//						ГОТОВО
+	if (i===59) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕНДОРУ RGB');//						ГОТОВО
 		atr(el,pref[39],'R');
 		atr(el,pref[40],'G');
 		atr(el,pref[41],'B');
@@ -4327,7 +4357,7 @@ for (var i = 0; i < erw; i++) {
 
 	};
 
-	if (i===58) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕНДОРУ RGB');//						ГОТОВО
+	if (i===60) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ВЕНДОРУ RGB');//						ГОТОВО
 		atr(el,pref[39],'R');
 		atr(el,pref[40],'G');
 		atr(el,pref[41],'B');
@@ -4337,7 +4367,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[36],'3');//			высота сокет
 	};
 
-	if (i===59) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ 21 УРОВЕНЬ 20+ КАЧЕСТВА');//		ГОТОВО
+	if (i===61) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ 21 УРОВЕНЬ 20+ КАЧЕСТВА');//		ГОТОВО
 		spavner(el,'Все камни умений');
 		atr(el,pref[33],'21');//		гем лвл ОТ
 		atr(el,pref[25],'20');//		качество ОТ
@@ -4354,7 +4384,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===60) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ 21 УРОВЕНЬ');//					ГОТОВО
+	if (i===62) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ 21 УРОВЕНЬ');//					ГОТОВО
 		spavner(el,'Все камни умений');
 		atr(el,pref[33],'21');//		гем лвл ОТ
 		atr(el,pref[2],'27 162 155');//	цвет текста
@@ -4370,7 +4400,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===61) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ 23 КАЧЕСТВА');//					ГОТОВО
+	if (i===63) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ 23 КАЧЕСТВА');//					ГОТОВО
 		spavner(el,'Все камни умений');
 		atr(el,pref[25],'23');//		качество ОТ
 		atr(el,pref[2],'27 162 155');//	цвет текста
@@ -4386,7 +4416,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===62) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ С КАЧЕСТВОМ ОТ 10');//			ГОТОВО
+	if (i===64) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КАМНИ С КАЧЕСТВОМ ОТ 10');//			ГОТОВО
 		spavner(el,'Все камни умений');
 		atr(el,pref[25],'10');//		качество ОТ
 		atr(el,pref[2],'27 162 155');//	цвет текста
@@ -4396,7 +4426,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[14],'Temp');//		при палении
 	};
 
-	if (i===63) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САПОРТЫ 4 УРОВНЯ');//					ГОТОВО
+	if (i===65) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САПОРТЫ 4 УРОВНЯ');//					ГОТОВО
 		spavner(el,'Все камни умений');
 		spavner(el,'Усилитель');spavner(el,'Наставник');spavner(el,'Улучшитель');
 		atr(el,pref[33],'4');//			гем лвл ОТ
@@ -4414,7 +4444,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===64) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САПОРТЫ 3 УРОВНЯ');//					ГОТОВО
+	if (i===66) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САПОРТЫ 3 УРОВНЯ');//					ГОТОВО
 		spavner(el,'Все камни умений');
 		spavner(el,'Усилитель');spavner(el,'Наставник');spavner(el,'Улучшитель');
 		atr(el,pref[33],'3');//			гем лвл ОТ
@@ -4432,7 +4462,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};	
 
-	if (i===65) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САПОРТЫ');//							ГОТОВО
+	if (i===67) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'САПОРТЫ');//							ГОТОВО
 		spavner(el,'Все камни умений');
 		spavner(el,'Усилитель');spavner(el,'Наставник');spavner(el,'Улучшитель');
 		atr(el,pref[2],'191 91 0');//	цвет текста
@@ -4449,7 +4479,45 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===66) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЛАБА ТРИНКЕТ');//						ГОТОВО
+	if (i===68) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ОСОБЫЕ ФЛАКОНЫ');//						ГОТОВО
+		spavner(el,'Ртутный флакон');
+		spavner(el,'Висмутовый флакон');
+		spavner(el,'Стибнитовый флакон');
+		spavner(el,'Аметистовый флакон');
+		spavner(el,'Рубиновый флакон');
+		spavner(el,'Сапфировый флакон');
+		spavner(el,'Топазовый флакон');
+		spavner(el,'Серебряный флакон');
+		spavner(el,'Аквамариновый флакон');
+		spavner(el,'Гранитный флакон');
+		spavner(el,'Кварцевый флакон');
+		spavner(el,'Нефритовый флакон');
+		spavner(el,'Серный флакон');
+		spavner(el,'Базальтовый флакон');
+		spavner(el,'Алмазный флакон');
+		atr(el,pref[2],'128 179 254');//цвет текста
+		atr(el,pref[3],'0 0 0');//		цвет фона
+		atr(el,pref[4],'170 158 120');//цвет бордер
+		atr(el,pref[5],'38');//			размер
+	};
+
+	if (i===69) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ФЛАКОНЫ ЖИЗНИ');//						ГОТОВО
+		spavner(el,'Флаконы жизни');
+		atr(el,pref[2],'128 179 254');//цвет текста
+		atr(el,pref[3],'0 0 0');//		цвет фона
+		atr(el,pref[4],'0 0 0');//		цвет бордер
+		atr(el,pref[5],'38');//			размер
+	};
+
+	if (i===70) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ФЛАКОНЫ МАНЫ');//						ГОТОВО
+		spavner(el,'Флаконы маны');
+		atr(el,pref[2],'128 179 254');//цвет текста
+		atr(el,pref[3],'0 0 0');//		цвет фона
+		atr(el,pref[4],'0 0 0');//		цвет бордер
+		atr(el,pref[5],'38');//			размер
+	};
+
+	if (i===71) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЛАБА ТРИНКЕТ');//						ГОТОВО
 		spavner(el,'Лабиринт тринкет');
 		atr(el,pref[2],'184 218 242');//цвет текста
 		atr(el,pref[3],'54 100 146');//	цвет фона
@@ -4465,7 +4533,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===67) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЛАБА КЛЮЧИ');//							ГОТОВО
+	if (i===72) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'ЛАБА КЛЮЧИ');//							ГОТОВО
 		spavner(el,'Лабиринт итем');
 		atr(el,pref[2],'0 100 150');//	цвет текста
 		atr(el,pref[3],'112 184 184');//цвет фона
@@ -4481,7 +4549,7 @@ for (var i = 0; i < erw; i++) {
 		atr(el,pref[9],'300');//		громкость
 	};
 
-	if (i===68) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КВЕСТОВЫЕ ВЕЩИ');//						ГОТОВО
+	if (i===73) {addForm();el=doc(i);atr(el,pref[1],'Show');atr(el,pref[0],'КВЕСТОВЫЕ ВЕЩИ');//						ГОТОВО
 		spavner(el,'Квест итемы');
 		atr(el,pref[2],'74 230 58 ');//	цвет текста
 		atr(el,pref[3],'0 73 0');//		цвет фона
@@ -4494,7 +4562,7 @@ for (var i = 0; i < erw; i++) {
 	};
 
 
-	if (i===69) {addForm();el=doc(i);atr(el,pref[1],'Hide');atr(el,pref[0],'СКРЫТЬ ВСЕ');//							ГОТОВО
+	if (i===74) {addForm();el=doc(i);atr(el,pref[1],'Hide');atr(el,pref[0],'СКРЫТЬ ВСЕ');//							ГОТОВО
 		atr(el,pref[6],ddS);//			удаляем стандартный звук
 	};
 }
