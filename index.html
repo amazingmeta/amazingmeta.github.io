@@ -106,11 +106,11 @@ function firefoxStyle(){// стили для Firefox
 	var firefox=/Firefox/i;
 	if(navigator.userAgent.search(firefox)!=-1){
 		var css=document.getElementsByTagName('style')[0];
-		css.textContent+='\pbutton{font-size:16px;}\p';
-		css.textContent+='.but14{transform:none;}\p';
-		css.textContent+='.but17{transform:none;}\p';
-		css.textContent+='img[alt]:after{display:none;}\p';
-		css.textContent+='.divain{padding:2px;}\p';
+		css.textContent+='button{font-size:16px;}';
+		css.textContent+='.but14{transform:none;}';
+		css.textContent+='.but17{transform:none;}';
+		css.textContent+='img[alt]:after{display:none;}';
+		css.textContent+='.divain{padding:2px;}';
 	}
 }
 firefoxStyle();
