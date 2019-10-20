@@ -98,7 +98,23 @@
 		.buttonMiniMapIcon{width:50px;height:50px;border:1px solid #000;background-repeat:no-repeat;background-color:rgba(0,0,0,0);background-position:center,center;}
 		.buttonMiniMapIcon:hover{background-color:rgb(0,255,0);}
 		.transform50{transform: translate(0,50%);}
+		.but14{transform:translate(0,-38%);}
+		.but17{transform:translate(0,-38%);}
 	</style>
+<script>
+function firefoxStyle(){// стили для Firefox
+	var firefox=/Firefox/i;
+	if(navigator.userAgent.search(firefox)!=-1){
+		var css=document.getElementsByTagName('style')[0];
+		css.textContent+='\pbutton{font-size:16px;}\p';
+		css.textContent+='.but14{transform:none;}\p';
+		css.textContent+='.but17{transform:none;}\p';
+		css.textContent+='img[alt]:after{display:none;}\p';
+		css.textContent+='.divain{padding:2px;}\p';
+	}
+}
+firefoxStyle();
+</script>
 </head>
 <body>
 <div id="loader" class="bgGreen" style="height:30px;width:0;margin:10px 0;"></div>
@@ -2907,10 +2923,10 @@ form2.innerHTML+='<div class="mar5 pad5 right bor borR3">'
 form2.innerHTML+='<div class="mar5 pad5 right bor borR3">'
 				+'МИНИКАРТА '
 				+'<input type="button"	id="" class="buttonMiniMapIcon but12 but13"	style="" onclick="butMiniIcon(this,event)" no="form'+i+'" atr="mapIconColor" atr2="mapIconForm">'
-				+'<input type="button" class="but14" onclick="sizeMapIcon(this,event)" value="НЕТ" no="form'+i+'" atr="mapIconSize" style="height:50px;transform:translate(0,-38%);">'+br
+				+'<input type="button" class="but14" onclick="sizeMapIcon(this,event)" value="НЕТ" no="form'+i+'" atr="mapIconSize" style="height:50px;">'+br
 				+'СВЕЧЕНИЕ '
 				+'<input type="button" class="butInp but16" onclick="colerDropEffect(this,event)" atr="dropefectcolor" no="form'+i+'">'
-				+'<button no="form'+i+'" value="Temp" atr="DropEfectStart" onclick="dropEStart(this)" class="but17" style="transform:translate(0,-38%);">ПРИ ПАДЕНИИ</button></div>';
+				+'<button no="form'+i+'" value="Temp" atr="DropEfectStart" onclick="dropEStart(this)" class="but17">ПРИ ПАДЕНИИ</button></div>';
 // БЛОК С КНОПКАМИ РАЗНЫХ СВОЙСТ В ТОМ ЧИСЛЕ И БУЛЕВЫМ ЗНАЧЕНИЕМ
 form2.innerHTML+='<div class="mar5 pad5 left bor borR3">'
 				+'<button class="Identified but18" 	no="form'+i+'" value="True" onclick="resBool(this)" atr="Identified">ОПОЗНАН</button>'+br
