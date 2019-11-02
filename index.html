@@ -108,7 +108,7 @@ function firefoxStyle(){// стили для Firefox
 	var firefox=/Firefox/i;
 	if(navigator.userAgent.search(firefox)!=-1){
 		var css=document.getElementsByTagName('style')[0];
-		css.textContent+='button{font-size:16px;}';
+		css.            +='button{font-size:16px;}';
 		css.textContent+='.but14{transform:none;}';
 		css.textContent+='.but17{transform:none;}';
 		css.textContent+='img[alt]:after{display:none;}';
@@ -2023,316 +2023,10 @@ firefoxStyle();
 	<input type="button" class="butInp" val="Yellow"	style="background-color:rgb(255,215,0);">
 </div>
 
-<!-- колер -->
-<div id="coler" class="colerBox right">
-	<div class="left w275">
-	<button class="fs20" onclick="cancel(this)">отмена</button><button class="bgRed fs20" onclick="ok(this)" value="destroy">удалить</button><button class="bgGreen fs20" style="width:85px;" onclick="ok(this)">ОК</button>
-	<div class="borR3 bor" style="width:275px;height:40px;margin: 10px 0;" id="prevColer"></div>
-	<button class="colerB" value="200 200 200"></button>
-	<button class="colerB" value="136 136 255"></button>
-	<button class="colerB" value="255 255 119"></button>
-	<button class="colerB" value="175 96 37"></button>
-	<button class="colerB" value="27 162 155"></button>
-	<button class="colerB" value="170 158 130"></button>
-	<button class="colerB" value="74 230 58"></button>
-	<button class="colerB" value="14 186 255"></button>
-	<br>
-	<button class="colerB" value="127 127 127"></button>
-	<button class="colerB" value="255 255 255"></button>
-	<button class="colerB" value="136 136 255"></button>
-	<button class="colerB" value="150 0 0"></button>
-	<button class="colerB" value="54 100 146"></button>
-	<button class="colerB" value="255 215 0"></button>
-	<button class="colerB" value="208 32 144"></button>
-	<button class="colerB" value="184 218 242"></button>
-	<br>
-	<button class="colerB" value="210 0 0"></button>
-	<button class="colerB" value="180 96 0"></button>
-	<button class="colerB" value="163 141 109"></button>
-	<button class="colerB" value="255 200 0"></button>
-	<button class="colerB" value="255 40 0"></button>
-	<button class="colerB" value="210 0 220"></button>
-	<button class="colerB" value="74 0 160"></button>
-	<button class="colerB" value="50 230 100"></button>
-	<br>
-	<button class="colerB" value="0 100 150"></button>
-	<button class="colerB" value="231 180 120"></button>
-	<button class="colerB" value="170 158 120"></button>
-	<button class="colerB" value="255 192 203"></button>
-	<button class="colerB" value="30 144 255"></button>
-	<button class="colerB" value="124 81 50"></button>
-	<button class="colerB" value="191 91 0"></button>
-	<button class="colerB" value="254 191 128"></button>
-	<br>
-	<button class="colerB" value="38 0 86"></button>
-	<button class="colerB" value="88 0 179"></button>
-	<button class="colerB" value="192 128 254"></button>
-	<button class="colerB" value="98 128 0"></button>
-	<button class="colerB" value="191 244 0"></button>
-	<button class="colerB" value="239 254 128"></button>
-	<button class="colerB" value="86 0 0"></button>
-	<button class="colerB" value="191 0 0"></button>
-	<br>
-	<button class="colerB" value="254 128 128"></button>
-	<button class="colerB" value="0 0 128"></button>
-	<button class="colerB" value="0 0 254"></button>
-	<button class="colerB" value="128 179 254"></button>
-	<button class="colerB" value="254 170 0"></button>
-	<button class="colerB" value="254 213 0"></button>
-	<button class="colerB" value="254 254 153"></button>
-	<button class="colerB" value="114 0 83"></button>
-	<br>
-	<button class="colerB" value="204 0 154"></button>
-	<button class="colerB" value="254 128 222"></button>
-	<button class="colerB" value="0 73 0"></button>
-	<button class="colerB" value="0 191 0"></button>
-	<button class="colerB" value="128 254 128"></button>
-	<button class="colerB" value="42 42 42"></button>
-	<button class="colerB" value="135 135 135"></button>
-	<button class="colerB" value="221 221 221"></button>
-	</div>
-	<div class="w255 right">
-	<input type="range" min="0" max="1" step="0.1" id="rangeA"	oninput="rangeColer(this)" value="1" class="w255">
-	<input type="range" min="0" max="600" step="1" id="rangeO" 	oninput="colerOT(this)"	 value="0" class="gra w255 right">
-	<div id="colerPick" class="h255 right w255"  onmousemove="pickPush(this)" style="background-color: red;">
-		<div id="" class="wh100 wite">
-			<div id="colerPick" class="wh100 black"  >
-				<div id="pick"  style="border-radius:50%;width: 6px;height: 6px;border:2px solid #000;position: relative;transform:translate(-50%,-50%);"></div>
-			</div>
-		</div>
-	</div>
-	</div>
-</div>
 <audio id="audio"></audio>
 </body>
+<script type="text/javascript" src="colerPickNC.js"></script>
 <script>
-//=======================================================================
-//					КОЛЕР-ПИКЕР
-//=======================================================================
-var rgba='',
-	XY=0+' '+0,
-	regrbl,
-	colerRGB,
-	RGBA,
-	x,y,
-	colerB=document.getElementsByClassName('colerB'),// button color ПРЕСЕТЫ
-	blockColer=document.getElementById('coler'),
-	rangeA=document.getElementById('rangeA'),
-	colorpick=document.getElementById('colerPick'),
-	pick=document.getElementById('pick'),
-	prevC=document.getElementById('prevColer'),
-	A=rangeA.value;
-function prevu(R,G,B,A){// приемник RGBA для превью
-	A=rangeA.value;
-	prevC.style.background='rgba('+parseInt(R)+', '+parseInt(G)+', '+parseInt(B)+', '+A+')';
-}
-function colGrad(R,G,B){// окрашиваем градиент переданным RGB
-	colorpick.style.background='rgb('+R+', '+G+', '+B+')';
-}
-
-function pickXY(X,Y){// задаем позицию пиксел
-	pick.style.top=X+'px';pick.style.left=Y+'px';
-}
-
-function pickPush(e){// позицианирование пикселя
-	colorpick.onmousemove=function(e){
-		X=e.offsetX;
-		Y=e.offsetY;
-		pick.onmousedown=function(e){		
-			left=pick.style.left;
-			to=pick.style.top;
-			Y=parseInt(to);//parseInt(Y)+
-			X=parseInt(left);//parseInt(X)+
-			pick.style.top=Y+'px';
-			pick.style.left=X+'px';
-		}
-		colorpick.onmousedown=function(e){
-			pick.style.top=Y+'px';
-			pick.style.left=X+'px';
-			XY=X+' '+Y;
-			// return XY;
-		}
-	}
-}
-
-function resultC(){// замена RGB на RGBA и наоборот
-	val=prevC.style.backgroundColor;
-	pres=val[0]+val[1]+val[2]+val[3];
-	if (val[3]==='a') {
-		val=val.slice(5).slice(-0,-1).split(', ');
-		red=val[0];
-		green=val[1];
-		blue=val[2];
-		alph=val[3];
-		RGBA=parseInt(red)+' '+parseInt(green)+' '+parseInt(blue)+' '+alph;
-	}
-	if (val[3]==='(') {
-		val=val.slice(4).split(', ');
-		red=val[0];
-		green=val[1];
-		blue=val[2];
-		RGBA=parseInt(red)+' '+parseInt(green)+' '+parseInt(blue);
-	}
-	return RGBA;
-}
-function colerGrad(obj){// перегон позиции Градиента в цвет
-	var p=255/100,
-		v=XY.split(' '),
-		white=v[0],
-		black=v[1],
-		white=white/p,
-		black=black/p,
-		val=colerRGB.split(' '),
-		R=parseInt(val[0]),
-		G=parseInt(val[1]),
-		B=parseInt(val[2]);
-	if (white>0) {
-		r=(255-parseInt(R))/100*parseInt(white);
-		g=(255-parseInt(G))/100*parseInt(white);
-		b=(255-parseInt(B))/100*parseInt(white);
-		R=parseInt(R)+parseInt(r);
-		G=parseInt(G)+parseInt(g);
-		B=parseInt(B)+parseInt(b);
-		if (black>0) {
-			R=parseInt(R)-(R/100)*parseInt(black);
-			G=parseInt(G)-(G/100)*parseInt(black);
-			B=parseInt(B)-(B/100)*parseInt(black);
-			prevu(parseInt(R),parseInt(G),parseInt(B),A=A);
-			RGBA=parseInt(R)+' '+parseInt(G)+' '+parseInt(B)+' '+A;
-		}
-	}	
-}
-
-blockColer.onclick=function(e){
-resultC();
-colerGrad();
-rangePro();
-}
-
-function colerOT(obj){// градиентный ползун
-	var re,gr,bl,
-		p=255/100,
-		v=obj.value;
-	if (v<100) {re=255;gr=p*v;bl=0;}
-	if (v>100) {v2=v-100;re=parseInt(255)-p*v2;gr=255;	bl=0;}
-	if (v>200) {v3=v-200;re=0;gr=255;bl=p*v3;}
-	if (v>300) {v4=v-300;re=0;gr=parseInt(255)-p*v4;bl=255;}
-	if (v>400) {v5=v-400;re=p*v5;gr=0;bl=255;}
-	if (v>500) {v6=v-500;re=255;gr=0;bl=parseInt(255)-p*v6;;}
-prevu(R=re,G=gr,B=bl,A=A);
-colGrad(re,gr,bl);
-pickXY(0,0);
-red=re;green=gr;blue=bl;
-resultC();
-RGBA=parseInt(re)+' '+parseInt(gr)+' '+parseInt(bl)+' '+A;
-colerRGB=parseInt(re)+' '+parseInt(gr)+' '+parseInt(bl);
-XY=0+' '+0;
-rangePro();
-}
-
-function colerV(e){// получаем значение с батон пресетов возвращаем rgb
-	var val=e.value.split(' '),
-		red=val[0],
-		green=val[1],
-		blue=val[2];
-	colGrad(red,green,blue);
-	prevu(red,green,blue,1);
-	RGBA=red+' '+green+' '+blue+' '+'1';
-	colerRGB=red+' '+green+' '+blue;
-	pickXY(0,0);
-	XY=0+' '+0;
-	rangePro();
-}
-
-function rangeColer(obj){// передаем параметры с ползунов на градиент превью
-	var v=obj.value;
-	col=RGBA.split(' ');
-	R=col[0];G=col[1];B=col[2];
-	prevu(R,G,B,v);
-}
-// присваиваем пресетам атрибут функции colerV(this)
-for (var i = 0; i < colerB.length; i++) {
-	colorV='';
-	element=colerB[i];
-	colorV=element.value;
-	element.style.background='rgb('+colorV+')';
-	element.setAttribute('onclick','colerV(this)');
-}
-//функция отмены
-function cancel(){
-	blockColer.style.display='none';
-	pickXY(0,0);// ставим позию пикер пиксел на 0
-	XY=0+' '+0;
-	rangeA.value=1;// возвращаем прозрачность
-	return rgba='';
-}
-// жмем ОК завершаем выбор цвета если DESTROY то удаляем цвет и аттрибут из формы
-function ok(obj){
-	var val=RGBA.split(' '),
-		R=parseInt(val[0]),
-		G=parseInt(val[1]),
-		B=parseInt(val[2]),
-		A=rangeA.value,
-		v=R+' '+G+' '+B,
-		v2=R+', '+G+', '+B+', '+A,
-		destr=obj.value,
-		no=rgba.getAttribute('no'),
-		no2=rgba.getAttribute('no2'),
-		no3=rgba.getAttribute('no3'),
-		atr=rgba.getAttribute('atr'),
-		form=document.getElementById(no),
-		prev=form.getElementsByClassName(no2)[0];
-	if (A==='1') {A='';}
-	rgba.style.background='rgb('+v+')';
-	rgba.setAttribute('val',v+' '+A);
-	form.setAttribute(atr,v+' '+A);
-	if (atr==='colorText') {prev.style.color='rgba('+v2+')';}// передаем результат в аттрибут текста
-	if (atr==='colorBacground') {prev.style.background='rgba('+v2+')';}// передаем результат в аттрибут фон
-	if (atr==='colorBorder') {;prev.style.border='1px solid rgba('+v2+')';}// передаем результат в аттрибут бордюр
-	if (destr==='destroy') {// если возвращается удаляем цвет и аттрибут из формы
-		form.removeAttribute(atr);
-		rgba.style.background='';
-		if (atr==='colorText') {prev.style.color='rgb(200 200 200)';}
-		if (atr==='colorBacground') {prev.style.background='rgb(0 0 0)';}
-		if (atr==='colorBorder') {prev.style.border='0px';}
-		rgba.removeAttribute('val');
-	}
-	blockColer.style.display='none';// закрываем блок колера
-	pickXY(0,0);// ставим позию пикер пиксел на 0
-	XY=0+' '+0;
-	rangeA.value=1;// возвращаем прозрачность
-}
-
-function colerVal(obj){// открываем блок колер и передаем параметр this для последуйщей обработки
-	rgba=obj;
-	val=rgba.getAttribute('val');
-	if(val===''||val==='null'||val===null||val==='undefined'||val===undefined){val='0 0 0 1';}
-	v=val.split(' ');
-	r=v[0];
-	g=v[1];
-	b=v[2];
-	a=v[3];if (a===''||a==='null'||a===null||a==='undefined'||a===undefined) {a=1;}
-	rangeA.value=a;
-	RGBA=r+' '+g+' '+b+' '+a;
-	colerRGB=r+' '+g+' '+b;
-	blockColer.style.top=y+'px';
-	blockColer.style.left=x+'px';
-	blockColer.style.display='block';
-	prevu(parseInt(r),parseInt(g),parseInt(b),a);
-	colGrad(parseInt(r),parseInt(g),parseInt(b));
-	rangePro();
-	return rgba;
-}
-
-function rangePro(){// передача RGB в градиент прозрачности для range прозрачности
-	v=RGBA.split(' ');
-	if (v==='null'||v===null||v===''||v==='undefined'||v===undefined) {v='000';}
-	rangeA.style.background='-webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba('+v[0]+', '+v[1]+', '+v[2]+', 1) 100%)';
-	rangeA.style.background+='-moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba('+v[0]+', '+v[1]+', '+v[2]+', 1) 100%)';
-	rangeA.style.background+='-ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba('+v[0]+', '+v[1]+', '+v[2]+', 1) 100%)';
-	rangeA.style.background+='-o-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba('+v[0]+', '+v[1]+', '+v[2]+', 1) 100%)';
-	rangeA.style.background+='linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba('+v[0]+', '+v[1]+', '+v[2]+', 1) 100%)';
-}
 //=========================================================================
 //
 //	ФУНКЦИЯ тож какойт формочки размер иконки на миникарте	// на допиливание
@@ -2873,10 +2567,15 @@ form.appendChild(form2);// СОЗДАЕМ ВЛОЖЕННУЮ ФОРМОЧКУ
 // СОЗАВАЕМЫЕ ОБЕКТЫ В ВЛОЖЕННОЙ ФОРМОЧКЕ ОСНОВЫ
 
 form2.innerHTML+='<div class="mar5 pad5 left bor borR3">'
-				+'<input type="button"  no="form'+i+'" no2="prevu'+i+'" no3="colorT'+i+'" atr="colorText"		onclick="colerVal(this)" class="butInp but3" style="margin:0 10px;"> ТЕКСТ '
-				+'<input type="button"  no="form'+i+'" no2="prevu'+i+'" no3="colorF'+i+'" atr="colorBacground"	onclick="colerVal(this)" class="butInp but4" style="margin:0 10px;"> ФОН '
-				+'<input type="button"  no="form'+i+'" no2="prevu'+i+'" no3="colorB'+i+'" atr="colorBorder"		onclick="colerVal(this)" class="butInp but5" style="margin:0 10px;"> РАМКА '
+// class="buttonColer" 	onclick="colerVal(this)"
+				+'<button no="form'+i+'" no2="prevu'+i+'" no3="colorT'+i+'" atr="colorText"			class="but3 buttonColer" style="margin:0 10px;"></button> ТЕКСТ '
+				+'<button no="form'+i+'" no2="prevu'+i+'" no3="colorF'+i+'" atr="colorBacground"	class="but4 buttonColer" style="margin:0 10px;"></button> ФОН '
+				+'<button no="form'+i+'" no2="prevu'+i+'" no3="colorB'+i+'" atr="colorBorder"		class="but5 buttonColer" style="margin:0 10px;"></button> РАМКА '
 				+'<input type="range"  min="15" max="45" value="15" step="5" no="form'+i+'" atr="FontSize" onchange="resSiz(this)" style="width:300px;background-color:rgba(0,0,0,0.5);margin:0 10px;" class="but7"></div>';
+				// +'<input type="button"  no="form'+i+'" no2="prevu'+i+'" no3="colorT'+i+'" atr="colorText"		 class="butInp but3 buttonColer" style="margin:0 10px;"> ТЕКСТ '
+				// +'<input type="button"  no="form'+i+'" no2="prevu'+i+'" no3="colorF'+i+'" atr="colorBacground"	 class="butInp but4 buttonColer" style="margin:0 10px;"> ФОН '
+				// +'<input type="button"  no="form'+i+'" no2="prevu'+i+'" no3="colorB'+i+'" atr="colorBorder"		 class="butInp but5 buttonColer" style="margin:0 10px;"> РАМКА '
+
 //<div class="bor left" style="border-radius:10px;margin:0 10px;padding:4px 10px  0 10px;">
 //ЗВУКОВОЙ БЛОК
 form2.innerHTML+='<div class="mar5 pad5 left bor borR3">'
@@ -3205,7 +2904,7 @@ function copyCode(){// копирование кода
 function loading(){
 	var ldng=document.getElementById('loader');
 	ldng.style.width='100%';
-	setTimeout(function(){ldng.innerHTML='v 0.2 обновлено 19.09.19';ldng.style.background='rgba(0,0,0,0)';},5000);
+	setTimeout(function(){ldng.innerHTML='v 0.3 обновлено 03.11.19';ldng.style.background='rgba(0,0,0,0)';},5000);
 // 	ldng.style.backgroundColor='';
 // 	var img=document.getElementsByTagName('img');
 // 	var countImg=0;
@@ -4784,7 +4483,7 @@ for (var ii = 0; ii < rer.length; ii++) {
 		linkCount(e,atr(e,pref[48]),'but45');
 	}
 }
-}//	коенц функции
-erw2();
+}erw2();//	коенц функции
+
 </script>
 </html>
